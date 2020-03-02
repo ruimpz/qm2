@@ -1,0 +1,297 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\rightmargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Notes on Quantum Mechanics II
+\end_layout
+
+\begin_layout Part
+Time Dependent Perturbation Theory
+\end_layout
+
+\begin_layout Section
+Interaction Representation
+\end_layout
+
+\begin_layout Standard
+We define the interactiong representation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left|\psi\left(t\right)\right\rangle _{S}=e^{-i\frac{H_{0}t}{\hbar}}\left|\psi\left(t\right)\right\rangle _{I}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where
+\begin_inset Formula 
+\[
+\left|\psi\left(t\right)\right\rangle _{I}=\mathcal{U}\left(t,t_{0}\right)\left|\psi\left(t_{0}\right)\right\rangle _{I}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From the Shrodinger equation
+\begin_inset Formula 
+\[
+i\hbar\partial_{t}\left|\psi\left(t\right)\right\rangle _{I}=i\hbar\text{\partial_{t}\left(e^{i\frac{H_{0}t}{\hbar}}\left|\psi\left(t\right)\right\rangle _{S}\right)}=-H_{0}e^{-i\frac{H_{0}t}{\hbar}}\left|\psi\left(t\right)\right\rangle _{S}+i\hbar e^{i\frac{H_{0}t}{\hbar}}\left[H_{0}+V\left(t\right)\mathbb{I}\right]\left|\psi\left(t\right)\right\rangle _{S}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+writing 
+\begin_inset Formula $\mathbb{I}=e^{-i\frac{H_{0}t}{\hbar}}e^{i\frac{H_{0}t}{\hbar}}$
+\end_inset
+
+ we get
+\begin_inset Formula 
+\[
+i\hbar\partial_{t}\left|\psi\left(t\right)\right\rangle _{I}=V_{I}\left(t\right)\left|\psi\left(t\right)\right\rangle _{I}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+from where follows
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+i\hbar\partial_{t}\mathcal{U}_{I}\left(t,t_{0}\right)=V_{I}\text{\left(t\right)\ensuremath{\mathcal{U}\left(t,t_{0}\right)}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Integrating the left hand side we get
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{t_{0}}^{t}i\hbar\partial_{t}\mathcal{U}_{I}\left(t,t_{0}\right)dt=i\hbar\left[\mathcal{U}_{I}\left(t,t_{0}\right)-\mathbb{I}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so
+\begin_inset Formula 
+\[
+\mathcal{U_{I}}\left(t,t_{0}\right)=\mathbb{I}-\frac{i}{\hbar}\int_{t_{0}}^{t}V_{I}\text{\left(t'\right)\ensuremath{\mathcal{U}_{I}\left(t',t_{0}\right)}}dt'
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Iterative Solution
+\end_layout
+
+\begin_layout Standard
+For the first order we get
+\begin_inset Formula 
+\[
+\mathcal{U_{I}}\left(t,t_{0}\right)=\mathbb{I}-\frac{i}{\hbar}\int_{t_{0}}^{t}dt'V_{I}\left(t'\right)+\frac{1}{\hbar^{2}}\int_{t_{0}}^{t}dt'V_{I}\left(t'\right)\int_{t_{0}}^{t'}dt''V_{I}\left(t''\right)+\dots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\sum_{n=0}^{\infty}\left(-\frac{i}{\hbar}\right)^{n}\int_{t_{0}}^{t}dt_{1}V_{I}\left(t_{1}\right)\dots\int_{t_{0}}^{t_{n-1}}dt_{n}V_{I}\left(t_{n}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Transition Probability
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\left|\psi\left(t_{0}\right)\right\rangle =\left|\phi_{i}\right\rangle $
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+P_{i\rightarrow f}=\left|\left\langle \phi_{f}|\psi\left(t\right)\right\rangle \right|^{2}=\left|c_{f}\left(t\right)\right|^{2}=\left|b_{f}\left(t\right)\right|^{2}=\left|\left\langle \phi_{f}\left|\mathcal{U_{I}}\left(t,t_{0}\right)\right|\phi_{i}\right\rangle \right|^{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In first order
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P_{i\rightarrow f}\approx\frac{1}{h^{2}}\left|\int_{t_{0}}^{t}dt'\left\langle \phi_{f}\left|V_{I}\left(t\right)\right|\phi_{i}\right\rangle \right|^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+but remembering that 
+\begin_inset Formula $V_{I}=e^{i\frac{H_{0}t}{\hbar}}V\left(t\right)e^{-i\frac{H_{0}t}{\hbar}}$
+\end_inset
+
+, and 
+\begin_inset Formula $\left|\phi_{j}\right\rangle $
+\end_inset
+
+ that are eigenstates of the Hamiltonian, it simplifies
+\begin_inset Formula 
+\[
+P_{i\rightarrow f}\approx\frac{1}{h^{2}}\left|\int_{t_{0}}^{t}dt'e^{i\omega_{fi}t'}\left\langle \phi_{f}\left|V\left(t\right)\right|\phi_{i}\right\rangle \right|^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+for 
+\begin_inset Formula $\omega_{fi}=\frac{E_{f}-E_{i}}{\hbar}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Sinusoidal perturbation
+\end_layout
+
+\begin_layout Standard
+Let
+\begin_inset Formula 
+\[
+V\left(t\right)=\mathcal{V}\cos\omega t
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

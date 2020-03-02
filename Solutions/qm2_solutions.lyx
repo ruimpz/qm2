@@ -1,0 +1,377 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ../../../lyx-layouts/exam/exam
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Quantum Mechanics II - Solutions
+\end_layout
+
+\begin_layout Author
+Rui Peixoto
+\end_layout
+
+\begin_layout Section
+Time Independent Perturbation Theory
+\end_layout
+
+\begin_layout SmartQuestion
+The Hamiltonian of the system is
+\begin_inset Formula 
+\[
+H=\frac{p^{2}}{2m}+\varepsilon_{0}qx
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+with eigenvalues
+\begin_inset Formula 
+\[
+E_{n}=\frac{\hbar^{2}\pi^{2}n^{2}}{2ma^{2}}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+and eigenvectors
+\begin_inset Formula 
+\[
+\psi_{n}=\begin{cases}
+\sqrt{\frac{2}{a}}\sin\left(\frac{n\pi x}{a}\right) & x\in[0,a]\\
+0 & x\notin[0,a]
+\end{cases}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout SmartQuestion
+The perturbation on the first energy level, is first order, is
+\begin_inset Formula 
+\[
+\Delta E=\langle\phi_{1}\left|W\right|\phi_{1}\rangle=\frac{2\varepsilon_{0}q}{a}\int_{0}^{a}x\sin^{2}\left(\frac{\pi x}{a}\right)dx=\frac{\varepsilon_{0}q}{a}\int_{0}^{a}x\left(1-\cos\left(\frac{2\pi x}{a}\right)\right)dx=\frac{\varepsilon_{0}qa}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout SmartQuestion
+The perturbation on the wavefunction gives
+\begin_inset Formula 
+\[
+\Delta\phi_{1}=\sum_{n\neq1}^{\infty}\frac{\langle\phi_{n}\left|W\right|\phi_{1}\rangle}{E_{1}-E_{n}}=\sum_{n=2}^{\infty}\frac{4\varepsilon_{0}qma}{\hbar^{2}\pi^{2}\left(1-n^{2}\right)}\int_{0}^{a}x\sin\left(\frac{\pi x}{a}\right)\sin\left(\frac{n\pi x}{a}\right)dx
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+as every even term is null, it simplifies to
+\begin_inset Formula 
+\[
+=\sum_{n=1}^{\infty}\frac{4\varepsilon_{0}qma}{\hbar^{2}\pi^{2}n\left(n\text{+1}\right)}\int_{0}^{a}x\sin\left(\frac{\pi x}{a}\right)\sin\left(\frac{\left(2n+1\right)\pi x}{a}\right)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout SmartQuestion
+The Hamiltonian of the unperturbed system is
+\begin_inset Formula 
+\[
+H_{0}=\hbar\omega\left(N+\frac{1}{2}\mathbb{I}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+with eigenvalues
+\begin_inset Formula 
+\[
+E_{n}=\hbar\omega\left(n+\frac{1}{2}\right).
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Let us introduce a perturbation 
+\begin_inset Formula $V=\varepsilon qx$
+\end_inset
+
+.
+ Recalling ladder operators defined as
+\begin_inset Formula 
+\[
+\begin{cases}
+a=\sqrt{\frac{m\omega}{2\hbar}}\left(x+\frac{i}{m\omega}p\right)\\
+a^{\dagger}=\sqrt{\frac{m\omega}{2\hbar}}\left(x-\frac{i}{m\omega}p\right)
+\end{cases}\Leftrightarrow\begin{cases}
+x=\sqrt{\frac{\hbar}{2m\omega}}\left(a^{\dagger}+a\right)\\
+p=i\sqrt{\frac{\hbar m\omega}{2}}\left(a^{\dagger}-a\right)
+\end{cases}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+we may write
+\begin_inset Formula 
+\[
+V=\varepsilon q\sqrt{\frac{\hbar}{2m\omega}}\left(a^{\dagger}+a\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout SmartQuestion
+The energy perturbation on first order is
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Delta E=\langle n\left|V\right|n\rangle=\varepsilon q\sqrt{\frac{\hbar}{2m\omega}}\langle n\left|a^{\dagger}+a\right|n\rangle=0
+\]
+
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+and on second order
+\begin_inset Formula 
+\[
+\Delta E_{n}=\sum_{m\neq n}^{\infty}\frac{\left|\langle m\left|V\right|n\rangle\right|^{2}}{E_{n}-E_{m}}=\frac{q^{2}\varepsilon^{2}\hbar}{2m\omega}\sum_{m\neq n}^{\infty}\frac{\left|\langle m\left|a^{\dagger}+a\right|n\rangle\right|^{2}}{\hbar\omega\left(n-m\right)}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{q^{2}\varepsilon^{2}\hbar}{2m\omega^{2}}\sum_{m\neq n}^{\infty}\frac{n\langle m|n-1\rangle^{2}+\left(n+1\right)\langle m|n+1\rangle^{2}}{\left(n-m\right)}=-\frac{q^{2}\varepsilon^{2}\hbar}{2m\omega^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout SmartQuestion
+The problem admits an analytical solution by noticing
+\begin_inset Formula 
+\[
+H=H_{0}+V=\frac{p^{2}}{2m}+\frac{1}{2}m\omega^{2}x^{2}+\varepsilon qx=\frac{p^{2}}{2m}+\frac{1}{2}m\omega^{2}\left(x+\frac{\varepsilon q}{m\omega^{2}}\right)^{2}-\frac{\varepsilon^{2}q^{2}}{2m\omega^{2}}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+by setting 
+\begin_inset Formula $X=x+\frac{\varepsilon q}{m\omega^{2}}$
+\end_inset
+
+ we get
+\begin_inset Formula 
+\[
+\frac{p^{2}}{2m}+\frac{1}{2}m\omega^{2}X^{2}-\frac{\varepsilon^{2}q^{2}}{2m\omega^{2}}=\hbar\omega\left(N+1\right)-\frac{\varepsilon^{2}q^{2}}{2m\omega^{2}}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+with eigenvalues
+\begin_inset Formula 
+\[
+E_{n}\text{'}=E_{n}-\frac{\varepsilon^{2}q^{2}}{2m\omega^{2}}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+so the perturbed solution energy on second order is exact.
+\end_layout
+
+\begin_layout SmartQuestion
+The first order correction to the wave function is
+\begin_inset Formula 
+\[
+\left|\psi_{n}\right\rangle =\left|n\right\rangle +\sum_{m\neq n}^{\infty}\frac{\langle m\left|V\right|n\rangle}{E_{n}-E_{m}}\left|m\right\rangle =\frac{q^{2}\varepsilon^{2}\hbar}{2m\omega}\sum_{m\neq n}^{\infty}\frac{\langle m\left|a^{\dagger}+a\right|n\rangle}{\hbar\omega\left(n-m\right)}\left|m\right\rangle =
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left|n\right\rangle +\frac{q\varepsilon}{\omega}\sqrt{\frac{\hbar}{2m\omega}}\left(\sqrt{n}\left|n-1\right\rangle -\sqrt{n+1}\left|n+1\right\rangle \right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout SmartQuestion
+The Hamiltonian of the system is
+\begin_inset Formula 
+\[
+H=\frac{p^{2}}{2m}+\frac{1}{2}m\omega^{2}x^{2}+\alpha x^{4}==\hbar\omega\left(N+\frac{1}{2}\mathbb{I}\right)+\alpha\frac{\hbar}{2m\omega}\left(a^{\dagger2}+a^{2}+2N+\mathbb{I}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout SmartQuestion
+The perturbation to the first energy level is given by
+\begin_inset Formula 
+\[
+\Delta E_{n}=\frac{\hbar}{2m\omega}\left\langle n\left|a^{\dagger2}+a^{2}+2N+\mathbb{I}\right|n\right\rangle =\frac{\hbar}{2m\omega}\left(2\hbar n+1\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout SmartQuestion
+The perturbed wave function is
+\begin_inset Formula 
+\[
+\left|\psi_{n}\right\rangle =\left|n\right\rangle +\frac{\hbar}{2m\omega}\sum_{m\neq n}^{\infty}\frac{\langle m\left|a^{\dagger2}+a^{2}+2N+\mathbb{I}\right|n\rangle}{E_{n}-E_{m}}\left|m\right\rangle 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left|n\right\rangle +\frac{\hbar^{2}}{4m\omega^{2}}\left[\sqrt{\left(n+1\right)\left(n+2\right)}\left|n+2\right\rangle -\sqrt{n\left(n-1\right)}\left|n-2\right\rangle \right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

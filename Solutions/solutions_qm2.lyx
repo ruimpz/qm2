@@ -1,0 +1,164 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{braket}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\rightmargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Quantum Mechanics II - Solutions
+\end_layout
+
+\begin_layout Section
+Time Independent Perturbation Theory
+\end_layout
+
+\begin_layout Subsection*
+1.a)
+\end_layout
+
+\begin_layout Standard
+The Hamiltonian of the system is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H=\frac{p^{2}}{2m}+\varepsilon_{0}qx
+\]
+
+\end_inset
+
+with eigenvalues
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E_{n}=\frac{\hbar^{2}\pi^{2}n^{2}}{2ma^{2}}.
+\]
+
+\end_inset
+
+and eigenvetors
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi_{n}=\sqrt{\frac{2}{a}}\sin\left(\frac{n\pi x}{a}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The perturbation on the energy of the first energy level is, in first order
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta E=\langle\psi_{1}\left|W\right|\psi_{1}\rangle=\frac{2\varepsilon_{0}q}{a}\int_{-\infty}^{\infty}x\sin^{2}\left(\frac{\pi x}{a}\right)dx=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and in second order
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta E=\sum_{m\neq1}^{\infty}\frac{\langle\psi_{n}\left|W\right|\psi_{1}\rangle}{E_{1}-E_{m}}=\sum_{m\neq1}^{\infty}\frac{4m\varepsilon_{0}qa}{\hbar^{2}\pi^{2}\left(1-m^{2}\right)}\int_{-\infty}^{\infty}x\sin\left(\frac{\pi x}{a}\right)\sin\left(\frac{m\pi x}{a}\right)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
